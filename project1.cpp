@@ -37,6 +37,16 @@ int main(){
 void getWords(vector<string> &words, ifstream &file){
     string word;
     while (file >> word){
+
+        for(int x = 0; x < word.length(); x++){
+            if (ispunct(word[x])){
+                word.erase(x, 1);
+                x--;
+            }
+        }
+        for(int y = 0; y < word.length(); y++){
+            word[y] = tolower(word[y]);
+        }
         words.push_back(word);
     }
     
