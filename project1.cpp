@@ -26,6 +26,9 @@ int main(){
     for(int t = 0; t < counts.size(); t++){
         cout << "Word: " << counts[t].first << " (Frequency:  " << counts[t].second << ")" << endl;
     }
+
+    file.close();
+    return 0;
 }
 
 
